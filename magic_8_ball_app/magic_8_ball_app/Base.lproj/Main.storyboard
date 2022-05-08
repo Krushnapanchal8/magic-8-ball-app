@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="magic_8_ball_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="e3S-cc-vWP">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qS0-5W-EYe" userLabel="top view">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="272"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask Me Anything..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="0Qn-bh-g8D">
+                                                <rect key="frame" x="48.5" y="112" width="317" height="48"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="0Qn-bh-g8D" firstAttribute="centerY" secondItem="qS0-5W-EYe" secondAttribute="centerY" id="5E4-JH-7Vi"/>
+                                            <constraint firstItem="0Qn-bh-g8D" firstAttribute="centerX" secondItem="qS0-5W-EYe" secondAttribute="centerX" id="QQm-6u-lg4"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a04-tn-Afn" userLabel="middle view">
+                                        <rect key="frame" x="0.0" y="273" width="414" height="272"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OGI-JW-0GM">
+                                                <rect key="frame" x="117" y="46" width="180" height="180"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="180" id="UPD-yC-ICy"/>
+                                                    <constraint firstAttribute="width" constant="180" id="qtR-0x-hDf"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="OGI-JW-0GM" firstAttribute="centerY" secondItem="a04-tn-Afn" secondAttribute="centerY" id="i99-Hb-0Nm"/>
+                                            <constraint firstItem="OGI-JW-0GM" firstAttribute="centerX" secondItem="a04-tn-Afn" secondAttribute="centerX" id="uOP-rl-rsM"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ui4-U3-93B" userLabel="bottom view">
+                                        <rect key="frame" x="0.0" y="546" width="414" height="272"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hZ-8E-BuA">
+                                                <rect key="frame" x="162.5" y="105" width="89" height="62"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Ask">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="40"/>
+                                                    <color key="baseForegroundColor" red="0.47374832630000002" green="0.85552245380000003" blue="0.90907156469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="askButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OAY-94-jxa"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="0hZ-8E-BuA" firstAttribute="centerY" secondItem="Ui4-U3-93B" secondAttribute="centerY" id="Nw7-xR-C81"/>
+                                            <constraint firstItem="0hZ-8E-BuA" firstAttribute="centerX" secondItem="Ui4-U3-93B" secondAttribute="centerX" id="vBu-Jb-Tnn"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.47450980392156861" green="0.85490196078431369" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="e3S-cc-vWP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cqt-Xj-6Qk"/>
+                            <constraint firstItem="e3S-cc-vWP" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="joy-H1-wBp"/>
+                            <constraint firstItem="e3S-cc-vWP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mha-c7-5gv"/>
+                            <constraint firstItem="e3S-cc-vWP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vcX-R6-MaS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="OGI-JW-0GM" id="vQA-fK-mm8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="107.8125"/>
+        </scene>
+    </scenes>
+</document>
